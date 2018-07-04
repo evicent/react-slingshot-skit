@@ -1,14 +1,12 @@
 {
-  "name": "react-slingshot",
-  "version": "7.0.1",
-  "description": "Starter kit for creating apps with React and Redux",
+  "name": "react-sling-base",
+  "version": "0.1.0",
+  "description": "",
   "engines": {
     "npm": ">=3"
   },
   "scripts": {
     "preinstall": "node tools/nodeVersionCheck.js",
-    "setup": "node tools/setup/setupMessage.js && npm install && node tools/setup/setup.js",
-    "remove-demo": "babel-node tools/removeDemo.js",
     "start-message": "babel-node tools/startMessage.js",
     "prestart": "npm run start-message",
     "start": "concurrently -k -r -s first \"npm run test:watch\" \"npm run open:src\" \"npm run lint:watch\"",
@@ -28,7 +26,7 @@
     "open:cover": "npm run test:cover && opn ./coverage/lcov-report/index.html",
     "analyze-bundle": "babel-node ./tools/analyzeBundle.js"
   },
-  "author": "Cory House",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "object-assign": "4.1.0",
@@ -42,14 +40,14 @@
   },
   "devDependencies": {
     "autoprefixer": "7.1.4",
-    "babel-cli": "6.24.1",
-    "babel-core": "6.25.0",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.3",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
-    "babel-loader": "7.1.1",
+    "babel-loader": "7.1.4",
     "babel-plugin-transform-react-constant-elements": "6.23.0",
     "babel-plugin-transform-react-remove-prop-types": "0.4.6",
-    "babel-polyfill": "6.23.0",
+    "babel-polyfill": "6.26.0",
     "babel-preset-env": "1.6.0",
     "babel-preset-react": "6.24.1",
     "babel-preset-stage-1": "6.24.1",
@@ -97,24 +95,10 @@
     "webpack-hot-middleware": "2.22.1",
     "webpack-md5-hash": "0.0.6"
   },
-  "keywords": [
-    "react",
-    "reactjs",
-    "react-router",
-    "hot",
-    "reload",
-    "hmr",
-    "live",
-    "edit",
-    "webpack",
-    "redux",
-    "flux",
-    "boilerplate",
-    "starter"
-  ],
+  "keywords": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/coryhouse/react-slingshot"
+    "url": ""
   },
   "jest": {
     "moduleNameMapper": {
@@ -129,7 +113,11 @@
   "babel": {
     "env": {
       "development": {
-        "presets": ["env", "react", "stage-1"]
+        "presets": [
+          "env",
+          "react",
+          "stage-1"
+        ]
       },
       "production": {
         "presets": [
